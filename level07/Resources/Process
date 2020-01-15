@@ -1,0 +1,7 @@
+./level07 outputs the current user/LOGNAME which is an enviroment variable.
+
+Can change this with export LOGNAME="Whatever"
+
+Simply put in the execution of getflag as the LOGNAME and it will run when catting out the name.
+
+export LOGNAME=\`getflag\`

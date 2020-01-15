@@ -1,0 +1,8 @@
+Found a pcap file in the base directory.
+We know this relates to packets being sent.
+
+Copied it off the machine.
+Put the file through Wireshark which showed us the packets being sent (Some of which are the password)
+
+Putting those together gave us this:
+ft_waNDReL0L

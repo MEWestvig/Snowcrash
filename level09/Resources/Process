@@ -1,0 +1,7 @@
+./level09 rotates characters by an increment of 1 each time.
+
+It seems token was passed through this programme. So write a script to do the opposite with token.
+
+Output of it gave f3iji1ju5yuevaus41q1afiuq.
+
+Which then got passed into su flag09 and got flag.

